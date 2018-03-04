@@ -1,0 +1,250 @@
+/*css for marquee*/
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 7s linear infinite;
+}
+.marquee span:hover {
+    animation-play-state: paused
+}
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/*css for whole html document*/
+html { 
+  background: transparent url('../images/main_background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: slateGray;
+}
+
+/*css for body*/
+body{
+	margin: 0 auto;
+}
+
+/*css for header and footer*/
+#header, #footer{
+	background-color: #465771;
+	margin: 0 auto;
+	width: 70%;
+	border-radius: 50px;
+}
+#footer h1{
+	margin: 0px;
+	padding: 3%;
+	color: oldlace;
+    font-size: -webkit-xx-large;
+    margin-top:3%;
+}
+#header h1{
+	margin: 0px;
+	padding: 4%;
+	color: oldlace;
+    font-size: -webkit-xxx-large;
+    animation: myfirst 5s linear infinite;
+	-moz-animation: myfirst 5s linear infinite; /* Firefox */
+	-webkit-animation: myfirst 5s linear infinite; /* Safari and Chrome */
+	-o-animation: myfirst 5s linear infinite; /* Opera */
+}
+/*header animation*/
+@keyframes myfirst{
+	0%,100%   {color:red;}
+	20%  {color:yellow;}
+	40%  {color:blue;}
+	60% {color:green;}
+	70%  {color:white;}
+	80% {color:orange;}
+}
+@-moz-keyframes myfirst /* Firefox */{
+	0%,100%   {color:red;}
+	20%  {color:yellow;}
+	40%  {color:blue;}
+	60% {color:green;}
+	70%  {color:white;}
+	80% {color:orange;}
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */{
+	0%,100%   {color:red;}
+	20%  {color:yellow;}
+	40%  {color:blue;}
+	60% {color:green;}
+	70%  {color:white;}
+	80% {color:orange;}
+}
+@-o-keyframes myfirst /* Opera */{
+	0%,100%   {color:red;}
+	20%  {color:yellow;}
+	40%  {color:blue;}
+	60% {color:green;}
+	70%  {color:white;}
+	80% {color:orange;}
+}
+
+/*css for website title name*/
+#content{
+	padding: 2%;
+	margin: 0 auto;
+	width: 80%;
+	padding-bottom: 0%;
+}
+
+/*css for marquee text label*/
+.welcome_label{
+	display: block;
+	text-align: center;
+	color: lightskyblue;
+    font-size: xx-large;
+	font-weight: bolder;
+}
+
+.welcome_label1{
+	display: none;
+	text-align: center;
+	color: lightskyblue;
+    font-size: x-large;
+	font-weight: bolder;
+}
+
+/*css for each dropdown div that is created dynamically*/
+.dropdown_div{
+	padding: 2%;
+	margin: 0 auto;
+	width: 70%;
+}
+
+/*css for last form div*/
+#divmargin{
+	margin-top: 3%;
+}
+
+/*css and animation for select label and dropdown*/
+#label{
+	color: turquoise;
+    font-size: x-large;
+    font-weight: bold;
+  	animation-duration: 4s;
+  	animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*css for select and its options*/
+#select1, #select2, #select3{
+	border-radius: 10px;
+	background: gainsboro;
+    margin-left: 2%;
+    padding: 1%;
+    border: black solid 2px;
+	font-size: large;
+	font-weight: bold;
+}
+#options{
+	padding-bottom: 1%;
+	font-size: large;
+	font-weight: bold;
+	border: black solid 1px;
+}
+
+/*css for label that shows your selected options*/
+#msglabel{
+	color: turquoise;
+    font-size: x-large;
+    font-weight: bold;
+    display: block;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+/*css for image and its div*/
+#image{
+	width:30%;
+	height:30%;
+	border-radius: 7%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	border:2px solid black;
+}
+.message_div{
+	padding: 2%;
+	margin: 0 auto;
+	width: 80%;
+}
+
+/*css for h2 tags at the end for review*/
+#thankYouLbl{
+	display: block;
+	text-align: center;
+	color: lightskyblue;
+	font-size: x-large;
+}
+#finalthankYouLbl{
+	display: block;
+	text-align: center;
+	color: lightgreen;
+	font-size: x-large;
+}
+#errroLbl{
+	display: block;
+	text-align: center;
+	color: red;
+	font-size: x-large;
+}
+
+/*css for review form labels and inputs*/
+fieldset{
+	width: 50%;
+	border: 0;
+	margin: 0;
+}
+fieldset label{
+	float: left;
+	width: 30%;
+	text-align: right;
+	color: turquoise;
+	font-size: x-large;
+	font-weight: bold;
+	vertical-align: middle;
+}
+fieldset input, fieldset textArea{
+	float: right;
+	width: 65%;
+	padding: 1%;
+	border: 2px solid black;
+	margin-bottom: 1%;
+	margin-left: 1%;
+	background: gainsboro
+}
+fieldset input[type=button]{
+	float: none;
+	width: 50%;
+	padding: 1%;
+	border: 2px solid black;
+	margin-bottom: 1%;
+	margin-left: 1%;
+	background: gainsboro;
+	border-radius: 5%;
+	margin-left: 20%;
+}
